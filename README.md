@@ -17,7 +17,7 @@
  <br/>
  1.4 添加TaskList.js    
  import { useQuery, gql } from '@apollo/client';    
- const EXCHANGE_RATES = gql`    
+ const EXCHANGE_RATES = gql`
       {   
         getTasks    
         {   
