@@ -33,9 +33,25 @@
  nest generate service tasks    
  执行npm run的时候，系统会自动解析resolver，生成schema.gql
  1.4 安装npm install apollo-datasource-rest，并使用其中的RESTDataSource请求.net core web api
-
-  <font color=Blue>我是蓝色</font>
-
-  <font color=#0099ff size=7 face="黑体">color=#0099ff size=72 face="黑体"</font>
+ 注意：RESTDataSource必须在app.module.ts -> GraphQLModule.forRoot 方法中注册   
+ GraphQLModule.forRoot({    
+      autoSchemaFile: 'schema.gql',   
+      debug: true,    
+      playground: true,   
+      dataSources: () => ({   
+        tasksAPI: new TaskMicoServiceAPI()    
+      }),   
+    }),   
+    
+   3: Service (.net core)
+   ====
+   3.1 dotnet new webapi    
+   3.2 添加TaskController.cs    
+   3.3 comment out：   
+   //app.UseHttpsRedirection();   
+   
+   最后，依次运行Service，BFF和Client    
+  
+  
 
  
