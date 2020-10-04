@@ -17,32 +17,8 @@
  <br/>
  1.4 添加TaskList.js    
  import { useQuery, gql } from '@apollo/client';    
- const EXCHANGE_RATES = gql`
-      {   
-        getTasks    
-        {   
-          id,   
-            title   
-        }   
-      }   
-`;    
-
+ 1.5 编辑App.js
+ import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client';    
  
-export const TaskList = () => {   
-    const { loading, error, data } = useQuery(EXCHANGE_RATES);    
-    
-    if (loading) return <p>Loading...</p>;    
-    if (error) return <p>Error :(</p>;    
-
-    return (    
-        <div>   
-            {data.getTasks.map(task => {    
-                  return(       
-                      <div>   
-                        {task.title}    
-                    </div>    
-                )   
-            })}   
-        </div>    
-    )   
-}   
+ 
+ 
