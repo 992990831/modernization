@@ -40,7 +40,7 @@
       debug: true,    
       playground: true,   
       dataSources: () => ({   
-        <span style="color:red">tasksAPI: new TaskMicoServiceAPI() </span>    
+        ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `tasksAPI: new TaskMicoServiceAPI()`
       }),   
     }),   
     TasksModule   
@@ -48,5 +48,12 @@
   controllers: [AppController],   
   providers: [AppService],    
 })    
+
+```diff
+- red
++ green
+! orange
+# gray
+```
 
  
