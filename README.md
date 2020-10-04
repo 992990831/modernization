@@ -25,5 +25,28 @@
  1.1 安装NestJS CLI， 并新建项目    
  npm i -g @nestjs/cli   
  nest BFF   
- 
+ 1.2 安装Apollo Server    
+ npm i --save @nestjs/graphql graphql-tools graphql apollo-server-express   
+ 1.3 这里我们采用code first，通过代码生成GraphQL schema
+ nest generate module tasks   
+ nest generate resolver tasks   
+ nest generate service tasks    
+ 执行npm run的时候，系统会自动解析resolver，生成schema.gql
+ 1.4 安装npm install apollo-datasource-rest，并使用其中的RESTDataSource请求.net core web api
+ @Module({    
+  imports: [    
+    GraphQLModule.forRoot({   
+      autoSchemaFile: 'schema.gql',   
+      debug: true,    
+      playground: true,   
+      dataSources: () => ({   
+        <span style="color:red">tasksAPI: new TaskMicoServiceAPI() </span>    
+      }),   
+    }),   
+    TasksModule   
+  ],    
+  controllers: [AppController],   
+  providers: [AppService],    
+})    
+
  
