@@ -17,8 +17,13 @@
  <br/>
  1.4 添加TaskList.js    
  import { useQuery, gql } from '@apollo/client';    
- 1.5 编辑App.js
+ 1.5 编辑App.js   
  import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client';    
  
+ 2: BFF (NestJS + Apollo Server)
+ ====
+ 1.1 安装NestJS CLI， 并新建项目    
+ npm i -g @nestjs/cli   
+ nest BFF   
  
  
