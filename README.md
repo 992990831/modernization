@@ -1,3 +1,13 @@
+参考：   
+https://docs.nestjs.com/graphql/quick-start   
+https://www.apollographql.com/docs/react/get-started/   
+https://www.apollographql.com/docs/tutorial/data-source/    
+
+GraphQL优势：
+----
+1：BFF层实现数据聚合    
+2：与React Hook结合，不需要Redux Saga就可以实现action与reducer间的异步数据读取    
+
 1: Client (React + Apollo Client)
 ====
 1.1 create-react-app client <br/>
