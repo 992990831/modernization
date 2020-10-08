@@ -3,6 +3,11 @@ https://docs.nestjs.com/graphql/quick-start
 https://www.apollographql.com/docs/react/get-started/   
 https://www.apollographql.com/docs/tutorial/data-source/    
 
+SSR:
+https://www.digitalocean.com/community/tutorials/react-server-side-rendering
+https://blog.smartcodehub.com/server-side-rendering-with-react/
+https://blog.somewhatabstract.com/2020/03/02/static-router-static-assets-serving-a-server-side-rendered-site
+
 GraphQL优势：
 ----
 1：BFF层实现数据聚合    
@@ -64,4 +69,13 @@ GraphQL优势：
   
   
 
+ 4: Client-SSR
+ ===
+ 要点
+ 4.1 Index.js中的 ReactDOM.render 改为 ReactDOM.hydrate， SSR下的渲染必须使用ReactDOM.hydrate    
+ 4.2 Server -> server.js -> app.get 方法要把会使用到的路径都加进去。  但不能用 /* 的方式，因为这样会把其他所有资源文件，如css, 图片都包括进来。   
+ 4.3  Server -> index.js 里面用到三个 dev dependencies： ignore-styles， @babel/register， @babel/preset-env， @babel/preset-react 需要单独安装。 
+      ingore-style是让webpack不要编译css和图片文件，因为SSR下没有real dom，编译会报错。   
+ 4.4  SSR下不能使用BrowserRouter或HashRouter，因为没有window.navigation对象。 所以react-route-dom提供了StaticRouter
+ 
  
