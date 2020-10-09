@@ -76,6 +76,19 @@ GraphQL优势：
  4.2 Server -> server.js -> app.get 方法要把会使用到的路径都加进去。  但不能用 /* 的方式，因为这样会把其他所有资源文件，如css, 图片都包括进来。   
  4.3  Server -> index.js 里面用到三个 dev dependencies： ignore-styles， @babel/register， @babel/preset-env， @babel/preset-react 需要单独安装。 
       ingore-style是让webpack不要编译css和图片文件，因为SSR下没有real dom，编译会报错。   
- 4.4  SSR下不能使用BrowserRouter或HashRouter，因为没有window.navigation对象。 所以react-route-dom提供了StaticRouter
+ 4.4  SSR下不能使用BrowserRouter或HashRouter，因为没有window.navigation对象。 所以react-route-dom提供了StaticRouter		
+ 
+ 5: Client-Test
+ ===
+ 5.1 npm install --save-dev enzyme enzyme-adapter-react-16 react-test-renderer		
+ 5.2 src文件夹下 -> 新建setupTests.js		
+
+import { configure } from 'enzyme';		
+import Adapter from 'enzyme-adapter-react-16';		
+configure({ adapter: new Adapter() });		
+
+5.3 shallow、mount示例: header.test.js		
+
+ 
  
  
