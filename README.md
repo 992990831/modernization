@@ -91,6 +91,7 @@ configure({ adapter: new Adapter() });
 
  
  6: ReactWebpack
+ ===
  how to build react with webpack + babel		
  reference: https://www.valentinog.com/blog/babel/
  
