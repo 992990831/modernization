@@ -87,8 +87,15 @@ import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';		
 configure({ adapter: new Adapter() });		
 
-5.3 shallow、mount示例: header.test.js		
+5.3 shallow、mount示例: header.test.js				
 
+ 
+ 6: ReactWebpack
+ how to build react with webpack + babel		
+ reference: https://www.valentinog.com/blog/babel/
+ 
+ 
+ 
  
  
  
