@@ -8,11 +8,13 @@ import express from 'express';
 import ReactDOMServer from 'react-dom/server';
 
 import App from '../src/App';
+import SEOPage from '../src/components/SEOPage';
+import { someAsyncCall } from '../server/API/Fun';
 
 const PORT = process.env.PORT || 3006;
 const app = express();
 
-app.get(['','/about','/contact'], (req, res) => {
+app.get(['', '/about', '/contact'], (req, res) => {
   const app = ReactDOMServer.renderToString(<App ssrLocation={req.url} />);
   console.log(`base uri: ${req.url}`);
   const indexFile = path.resolve('./build/index.html');
@@ -27,6 +29,22 @@ app.get(['','/about','/contact'], (req, res) => {
     );
   });
 });
+
+app.get('/seo', async function (req, res) {
+  let result = await someAsyncCall();
+  //let result = await callFun01();
+  const pageStr = ReactDOMServer.renderToString(<SEOPage name={result} />);
+  console.log(`base uri: ${req.url}`);
+  return res.send(
+    pageStr
+  );
+});
+
+// const callFun01 = async () => {
+//   let result = await someAsyncCall();
+//   console.log(`result: ${result}`);
+//   return result;
+// }
 
 app.use(express.static('./build'));
 
