@@ -1,20 +1,20 @@
 import React, { useEffect, useState } from "react";
 
-// function someAsyncCall(){
-//     return new Promise((resolve, reject) => {
-//         setTimeout(()=>{
-//             resolve("from async call");
-//         }, 2000);
-//     });
-// }
+function someAsyncCall(){
+    return new Promise((resolve, reject) => {
+        setTimeout(()=>{
+            resolve("from async call");
+        }, 2000);
+    });
+}
 
 const Home = (props) => {
-    // useEffect(async ()=>{
-    //     setName("Andy");
+    useEffect(async ()=>{
+        setName("Andy");
 
-    //     let result = await someAsyncCall();
-    //     setName(result);
-    // }, []);
+        let result = await someAsyncCall();
+        setName(result);
+    }, []);
 
     // useEffect(()=>{
     //     setName("Andy");

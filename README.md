@@ -76,7 +76,12 @@ GraphQL优势：
  4.2 Server -> server.js -> app.get 方法要把会使用到的路径都加进去。  但不能用 /* 的方式，因为这样会把其他所有资源文件，如css, 图片都包括进来。   
  4.3  Server -> index.js 里面用到三个 dev dependencies： ignore-styles， @babel/register， @babel/preset-env， @babel/preset-react 需要单独安装。 
       ingore-style是让webpack不要编译css和图片文件，因为SSR下没有real dom，编译会报错。   
- 4.4  SSR下不能使用BrowserRouter或HashRouter，因为没有window.navigation对象。 所以react-route-dom提供了StaticRouter		
+ 4.4  SSR下不能使用BrowserRouter或HashRouter，因为没有window.navigation对象。 所以react-route-dom提供了StaticRouter				
+ 4.5  为了在renderToString时能使用async/await, 要在webpack配置中增加		
+   plugins: [		
+    '@babel/transform-runtime'		
+  ]		
+ 4.6 一种SEO可能性的思考：React项目编译为multi-output, 某些页面需要SEO，有些不需要。 对需要SEO的页面，在express端，先获取到数据，通过props传递给对应页面，然后res.send发送给前端。		
  
  5: Client-Test
  ===
@@ -91,9 +96,11 @@ configure({ adapter: new Adapter() });
 
  
  6: ReactWebpack
- ===
- how to build react with webpack + babel		
- reference: https://www.valentinog.com/blog/babel/
+ ===		
+ how to build react with webpack + babel				
+ reference: https://www.valentinog.com/blog/babel/		
+ 
+ 
  
  
  
