@@ -98,7 +98,15 @@ configure({ adapter: new Adapter() });
  6: ReactWebpack
  ===		
  how to build react with webpack + babel				
- reference: https://www.valentinog.com/blog/babel/		
+ reference: https://www.valentinog.com/blog/babel/				
+ 
+ 7：Qianqun微前端		
+ ===
+ Main：基座项目(Vue)		
+ One：子项目(Vue)		
+ Two: 子项目(Vue)		
+ Three: 子项目(React)		
+ 
  
  
  
