@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\FrontEndDemo\\NestJS\\dotnet-core-service\\dotnet-core-service.csproj",
+      "projectUniqueName": "C:\\FrontEndDemo\\modernization\\service\\dotnet-core-service.csproj",
       "projectName": "dotnet-core-service",
-      "projectPath": "C:\\FrontEndDemo\\NestJS\\dotnet-core-service\\dotnet-core-service.csproj",
+      "projectPath": "C:\\FrontEndDemo\\modernization\\service\\dotnet-core-service.csproj",
       "packagesPath": "C:\\Users\\xiaohuhu\\.nuget\\packages\\",
-      "outputPath": "C:\\FrontEndDemo\\NestJS\\dotnet-core-service\\obj\\",
+      "outputPath": "C:\\FrontEndDemo\\modernization\\service\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\xiaohuhu\\AppData\\Roaming\\NuGet\\NuGet.Config",

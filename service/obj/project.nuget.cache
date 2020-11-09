@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "e/dp2WAHFTT2HX9YQcG/pBPiUpLCO86/C/gEJqRIpEVmqGr0aQSlMdA9e8pGWdZuBvIXTJ+r/reejj7h+cFQlw==",
+  "dgSpecHash": "XDfOOqt6kZQHKAuYLh2L2tuVdMOAI+HtKHk110hfDhzpTHqifPGxX1+kyhxQhrdzdDi0NyYRDTa5is3J4Z9w4Q==",
   "success": true,
-  "projectFilePath": "C:\\FrontEndDemo\\NestJS\\dotnet-core-service\\dotnet-core-service.csproj",
+  "projectFilePath": "C:\\FrontEndDemo\\modernization\\service\\dotnet-core-service.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
