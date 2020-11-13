@@ -5,20 +5,21 @@ const Home = lazy(() => import('./Home'));
 //const About = lazy(() => import('./About'));
 const About = lazy(() => {
     return Promise.all([
-      import("./Home"),
-      new Promise(resolve => setTimeout(resolve, 3000))
+        import("./About"),
+        new Promise(resolve => setTimeout(resolve, 3000))
     ])
-    .then(([moduleExports]) => moduleExports);
-  });
+        .then(([moduleExports]) => moduleExports);
+});
 
 const LazyDemo = () => {
     return (
         <Router>
+            <ul>
+                <li><Link to='/'>Home</Link></li>
+                <li><Link to='/about'>About</Link></li>
+            </ul>
             <Suspense fallback={<div>Loading...</div>}>
-                <ul>
-                    <li><Link to='/'>Home</Link></li>
-                    <li><Link to='/about'>About</Link></li>
-                </ul>
+
                 <Switch>
                     <Route exact path="/" component={Home} />
                     <Route path="/about" component={About} />
