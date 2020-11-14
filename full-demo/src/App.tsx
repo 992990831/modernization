@@ -16,7 +16,7 @@ import { NotFound } from './components/NotFound';
 const Routes = withRouter(({location}) => (
   <TransitionGroup className={'router-wrapper'}>
     <CSSTransition
-      timeout={5000}
+      timeout={500}
       classNames={'fade'}
       key={location.pathname}
     >
