@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import RightNav from './RightNav';
 import logo from '../../images/StubHub.png';
 
+import { useHistory } from "react-router-dom";
+
 //Mobile view menu icon
 const StyledBurger = styled.div<{ open: boolean }>`
   width: 2rem;
@@ -57,11 +59,14 @@ const Nav = styled.nav`
 
 const NavBar = () => {
     const [open, setOpen] = useState(false)
-
+    let history = useHistory();
+    
     return (
         <Nav>
             <div className="logo">
-                <img src={logo} style={{height:'30px'}}></img>
+                <img src={logo} style={{height:'30px'}} onClick={()=>{
+                  history.push('/');
+                }} ></img>
             </div>
             <StyledBurger open={open} onClick={() => setOpen(!open)}>
                 <div />

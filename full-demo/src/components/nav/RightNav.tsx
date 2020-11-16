@@ -41,11 +41,11 @@ const RightNav:FC<RightNavProps> = (prop) => {
             <li><a href='#'>订单</a></li>
             <li><a href='#'>联系我们</a></li>
             <li><a href='#'>个人信息</a></li> */}
-            <li><Link to='/'>首页</Link></li>
+            <li id='link-home'><Link to='/'>首页</Link></li>
             <li><Link to='/commodities'>商品</Link></li>
             <li><Link to='/orders'>订单</Link></li>
-            <li><a href='/contact'>联系我们</a></li>
-            <li><a href='/account'>个人信息</a></li>
+            <li><Link to='/contact'>联系我们</Link></li>
+            <li><Link to='/account'>个人信息</Link></li>
         </Ul>
     )
 }
