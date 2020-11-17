@@ -3,7 +3,7 @@ import axios from 'axios';
 export const Get_Order_Url = '/order';
 
 export const Request = axios.create({
-    baseURL: 'http://localhost:5000/',
+    baseURL: 'http://localhost:5000/', //这个配置可以放到环境变量中，参见第一篇文章。
     responseType: 'json'
 });
 
