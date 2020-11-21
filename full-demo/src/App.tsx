@@ -11,6 +11,8 @@ import { Home } from './components/Home';
 import Commodities from './components/Commodities';
 import {Orders} from './components/Orders';
 
+import { Account } from './components/account/Account';
+
 import { NotFound } from './components/NotFound';
 
 const Routes = withRouter(({location}) => (
@@ -24,6 +26,15 @@ const Routes = withRouter(({location}) => (
         <Route exact path='/' component={Home} />
         <Route exact path='/commodities' component={Commodities} />
         <Route exact path='/orders' component={Orders} />
+        <Route exact path='/account' render={()=>{
+          let login = true;
+          if(!login)
+          {
+            return(<div>You are not authorized!</div>)
+          }
+          
+          return(<Account />)
+        }} />
         <Route exact path='/*' component={NotFound} />
       </Switch>
     </CSSTransition>
