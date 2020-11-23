@@ -1,7 +1,7 @@
-export const token = Symbol('token');
+//export const token = Symbol('token');
 import { Request, Sign_In_Url } from '../util/Request';
 
-export interface Order{
+export interface UserInfo{
     id: number;
     note: string;
 }
@@ -14,7 +14,7 @@ class AuthService {
       const resp = await Request.get(Sign_In_Url);
       
       debugger;
-      localStorage.setItem(Sign_In_Url, JSON.stringify(resp.data));
+      localStorage.setItem('auth_token', JSON.stringify(resp.data));
       success = true;
     } catch {
       console.error('auth failed');

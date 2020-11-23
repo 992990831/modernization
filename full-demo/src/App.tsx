@@ -11,7 +11,7 @@ import { Home } from './components/Home';
 import Commodities from './components/Commodities';
 import {Orders} from './components/Orders';
 
-import { Account } from './components/account/Account';
+import { Account } from './components/Account/Account';
 
 import { NotFound } from './components/NotFound';
 

@@ -1,10 +1,10 @@
 import axios from 'axios';
 
 export const Get_Order_Url = '/order';
-export const Sign_In_Url = '/auth';
+export const Sign_In_Url = '/login';
 
 export const Request = axios.create({
-    baseURL: 'http://localhost:5000/', //这个配置可以放到环境变量中，参见第一篇文章。
+    baseURL: 'http://localhost:3006/', //这个配置可以放到环境变量中，参见第一篇文章。
     responseType: 'json'
 });
 
